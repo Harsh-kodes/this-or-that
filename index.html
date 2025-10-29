@@ -2,28 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>This or That Game</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>This or That: Coding Edition 💻</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="game-container">
-    <h1>This or That?</h1>
-    <div id="question-container">
-      <button id="optionA" class="option-button">Option A</button>
-      <span class="or-text">OR</span>
-      <button id="optionB" class="option-button">Option B</button>
-    </div>
-    <p id="result"></p>
-  </div>
-  <div class="theme-toggle">
-  <label class="switch">
-    <input type="checkbox" id="theme-switch">
-    <span class="slider"></span>
-  </label>
-  <span>🌞 / 🌙</span>
-</div>
+  <div class="container">
+    <header>
+      <h1><span>💻</span> This or That: <strong>Coding Edition</strong></h1>
+      <p class="subtitle">Choose your tech side wisely! ⚡</p>
+      <div class="scoreboard">
+        <p>Score: <span id="score">0</span></p>
+        <p>Round: <span id="round">1</span>/<span id="totalRounds">10</span></p>
+      </div>
+    </header>
 
+    <main>
+      <div class="question-card">
+        <div id="question"></div>
+        <div class="options">
+          <button id="leftBtn" class="option-btn"></button>
+          <div class="vs">VS</div>
+          <button id="rightBtn" class="option-btn"></button>
+        </div>
+      </div>
+      <button id="nextBtn" class="next-btn hidden">Next ➡️</button>
+    </main>
+
+    <footer>
+      <button id="resetBtn" class="footer-btn">🔄 Reset</button>
+      <button id="shareBtn" class="footer-btn">📤 Share</button>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
